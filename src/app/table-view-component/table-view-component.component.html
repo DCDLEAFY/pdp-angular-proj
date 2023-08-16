@@ -1,0 +1,26 @@
+<div class="main-table">
+    <table class="table table-striped">
+        <caption>Table with game data</caption>
+        <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Genre</th>
+            <th scope="col">RRP</th>
+            <th scope="col">ImagePath</th>
+            <th scope="col">isDeleted</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let game of gamesData">
+                <td>{{game.id}}</td>
+                <td>{{game.Title}}</td>
+                <td>{{game.Description}}</td>
+                <td>{{game.Genre}}</td>
+                <td>{{game.RRP}}</td>
+                <td>{{game.ImagePath}}</td>
+                <td>{{game.isDeleted}}</td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
