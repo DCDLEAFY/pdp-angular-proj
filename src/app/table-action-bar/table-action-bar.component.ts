@@ -24,8 +24,6 @@ export class TableActionBarComponent {
       Title: "test100"
     }
     console.log(body, 'test')
-    this.GameService.httpAddGame(body).subscribe(
-      () => {console.log('data created')}
-    );
+    this.GameService.httpAddGame(body);
   }
 }

@@ -11,7 +11,7 @@ import { Game } from '../library/game';
 })
 export class TableViewComponentComponent implements OnInit {
 
-  @Input() gamesData : Game[] = [];
+  gamesData : Game[] = [];
   
 
   constructor(private _gameService: GameService){
@@ -19,10 +19,7 @@ export class TableViewComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._gameService.httpGetGames()
-    .subscribe({
-      next: (data) => this.gamesData = data,
-      error: (error) => console.log(error)
-    });
+    this._gameService.httpGetGames();
+    this._gameService.gameData.subscribe(gamesData => this.gamesData = gamesData);
   }
 }
