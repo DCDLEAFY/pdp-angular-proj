@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Game } from '../library/game';
-import { GameService } from '../library/game.service';
+import { Game } from '../shared/game';
+import { GameService } from '../shared/game.service';
 
 @Component({
   selector: 'app-table-action-bar',
@@ -16,12 +16,12 @@ export class TableActionBarComponent {
   addGame(){
     const body : Game = {
       id: 0,
-      Genre : "",
-      Description : "",
-      ImagePath: "",
-      RRP: 0,
+      genre : "test",
+      description : "test",
+      imagePath: "test",
+      rRP: 0,
       isDeleted: false,
-      Title: "test100"
+      title: "Mock"
     }
     console.log(body, 'test')
     this.GameService.httpAddGame(body);
