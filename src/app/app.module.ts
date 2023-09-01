@@ -7,18 +7,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableViewComponentComponent } from './table-view-component/table-view-component.component';
 import { TableActionBarComponent } from './table-action-bar/table-action-bar.component';
 import { GameNavbarComponent } from './game-navbar/game-navbar.component';
+import { ModalContentComponent } from './modal-content/modal-content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableViewComponentComponent,
     TableActionBarComponent,
-    GameNavbarComponent
+    GameNavbarComponent,
+    ModalContentComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

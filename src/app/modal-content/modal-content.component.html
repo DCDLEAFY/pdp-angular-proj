@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+        Simple Modal
+    </h4>
+    <!-- <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button> -->
+</div>
+<div class="modal-body">
+    <div>
+        <label>Title</label>
+        <input [(ngModel)]="game.title" type="text">
+    </div>
+    <div>
+        <label>IsDeleted</label>
+        <input [(ngModel)]="game.isDeleted" type="text">        
+    </div>
+    <div>
+        <label>ImagePath</label>
+        <input [(ngModel)]="game.imagePath" type="text">
+    </div>
+    <div>
+        <label>RRP</label>
+        <input [(ngModel)]="game.rRP" type="text">
+    </div>
+    <div>
+        <label>Genre</label>
+        <input [(ngModel)]="game.genre" type="text">
+    </div>
+    <div>
+        <label>Description</label>
+        <input [(ngModel)]="game.description" type="text">
+    </div>
+    
+    <button (click)="addModal()" type="submit" class="btn btn-primary w-100">Submit</button>
+</div>
