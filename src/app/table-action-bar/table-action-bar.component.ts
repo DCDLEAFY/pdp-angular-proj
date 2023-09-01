@@ -15,11 +15,11 @@ export class TableActionBarComponent {
   public game : Game = 
     {
       id: 1,
-      title: "test",
-      description: "test",
-      genre: "test",
+      title: "temp",
+      description: "temp",
+      genre: "temp",
       rRP: 0,
-      imagePath: "test",
+      imagePath: "temp",
       isDeleted: false
     }
 
@@ -27,28 +27,14 @@ export class TableActionBarComponent {
     private GameService: GameService,
     private modalService: NgbModal){}
 
-  addGame(){
-    const body : Game = {
-      id: 0,
-      genre : "test",
-      description : "test",
-      imagePath: "test",
-      rRP: 0,
-      isDeleted: false,
-      title: "Mock"
-    }
-    console.log(body, 'test')
-    this.GameService.httpAddGame(body);
-  }
-
   createModal(){
     const modalRef = this.modalService.open(ModalContentComponent);
     modalRef.componentInstance.game = this.game;
     modalRef.result.then((result) => {
       if(result){
-        console.log(result);
+        this.GameService.httpAddGame(result)
       } else {
-        console.log("Maaaaan")
+        console.log("Error Retreiving from modal")
       }
     }).catch(err =>  console.log(err))
   }
