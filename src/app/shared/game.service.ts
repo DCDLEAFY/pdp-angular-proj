@@ -55,4 +55,16 @@ export class GameService{
 
         return result;
     }
+
+    httpDeleteGame(gameTitle : string){
+        this.http.put<Game>(this.url + "/delete-games-by-title/" + gameTitle, {}).subscribe({
+            next: (game : Game) => {
+
+                console.log("Game deleted");
+                console.log(game);
+                this.httpGetGames();
+            },
+            error: (err : Error) => console.error(err)
+        })
+    }
 }

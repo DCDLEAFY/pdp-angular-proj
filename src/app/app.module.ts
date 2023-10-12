@@ -9,6 +9,7 @@ import { TableActionBarComponent } from './table-action-bar/table-action-bar.com
 import { GameNavbarComponent } from './game-navbar/game-navbar.component';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import { FormsModule } from '@angular/forms';
+import { ModalDeleteComponent } from './modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     TableViewComponentComponent,
     TableActionBarComponent,
     GameNavbarComponent,
-    ModalContentComponent
+    ModalContentComponent,
+    ModalDeleteComponent
   ],
   imports: [
     BrowserModule,
